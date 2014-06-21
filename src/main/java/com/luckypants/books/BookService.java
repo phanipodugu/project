@@ -155,22 +155,7 @@ public class BookService {
 		return Response.status(200).build();
 	}
 
-	@GET
-	@Path("files/{filename}")
-	@Produces(MediaType.WILDCARD)
-	public Response getFile(@PathParam("filename") String filename) {
-		try {
-			ProvidePackagedFileCommand getFile = new ProvidePackagedFileCommand();
-			InputStream is = getFile.execute(filename);
-
-			ResponseBuilder response = Response.ok((Object) is);
-			response.header("Content-Disposition", "attachment; filename=\""
-					+ filename + "\"");
-			return response.build();
-		} catch (Exception e) {
-			return Response.status(404).entity(e.getMessage()).build();
-		}
-	}
+	
 
 	@GET
 	@Path("inline/{filename}")

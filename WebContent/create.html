@@ -17,7 +17,7 @@ $(document).ready(function(){
   		$.each(data, function(key, value){
   			
   			if(key!="author" && key!="genres" && key!="img" 
-  				 && key!="_author_id"){
+  				 && key!="_author_id" && key!="imageid"){
   				console.log("key" +key);
   				$("div.book_div").append("<br/>Please enter " + key + ":"+"<input type='text' name='"+key+"'"+">");
   			}
@@ -33,7 +33,7 @@ $(document).ready(function(){
 	        $.each(adata, function(akey, avalue){
 	        	console.log("value123 "+avalue.fname);
 	        $(".sauth").append("<option value='"+avalue.id+"'>"+avalue.fname+"</option>");
-	        console.log("<option value='"+avalue.id+"'>"+avalue.fname+"</option>");
+	        //console.log("<option value='"+avalue.id+"'>"+avalue.fname+"</option>");
 	        });
 	        
 	        });
@@ -50,13 +50,13 @@ $(document).ready(function(){
 	 $.getJSON(meta_url+"book",function(data){
 	        $.each(data, function(key, value){
 	        if(key=="imageid"){
-	        $("div.book_div").append("<br/>Please select image: <select class='simg' name='_image_id '>");
+	        $("div.book_div").append("<br/>Please select image: <select class='simg' name='imageid'>");
 	        $("div.book_div").append(function(){
 	        $.getJSON(image_url,function(adata){      	
 	        $.each(adata, function(akey, avalue){
 	        	console.log("value123 "+avalue.imagename);
-	        $(".simg").append("<option value='"+avalue.id+"'>"+avalue.imagename+"</option>");
-	        console.log("<option value='"+avalue.id+"'>"+avalue.fname+"</option>");
+	        $(".simg").append("<option value='"+avalue.imagename+"'>"+avalue.imagename+"</option>");
+	        console.log("<option value='"+avalue.imagename+"'>"+avalue.imagename+"</option>");
 	        });
 	        
 	        });
