@@ -40,7 +40,7 @@ public class GetImageCommand {
 	public static void main(String[] args) {
 		GetImageCommand command = new GetImageCommand();
 
-		image b = command.execute("imagename", "asdf.jpg");
+		image b = command.execute("imagename", "ds.jpg");
 		ObjectMapper mapper = new ObjectMapper();
 		try {
 			System.out.println(mapper.writeValueAsString(b));

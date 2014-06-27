@@ -16,7 +16,8 @@ public class ListAllImagesCommand {
 		ConnectionProvider conn = new ConnectionProvider();
 		DBCollection imagecollection = conn.getCollection("images");
 	
-		DBCursor cursor = imagecollection.find();
+		DBCursor cursor = imagecollection.find()
+				;
 		ArrayList<image> images = new ArrayList<image>();
 		GetImageCommand getimages = new GetImageCommand();
 		try {

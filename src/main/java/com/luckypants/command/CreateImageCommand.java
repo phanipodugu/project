@@ -23,7 +23,7 @@ public class CreateImageCommand {
 			return dbObject.get("_id").toString();
 			
 		} catch (Exception e) {
-			System.out.println("ERROR during mapping author to Mongo Object");
+			System.out.println("ERROR during mapping image to Mongo Object");
 			return null;
 		}
 	}
