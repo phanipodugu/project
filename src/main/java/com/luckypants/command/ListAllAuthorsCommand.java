@@ -25,6 +25,7 @@ public class ListAllAuthorsCommand {
 			while (cursor.hasNext()) {
 				Author b = getauthor.execute("_id",
 						cursor.next().get("_id").toString());
+				System.out.println("cursor ----- "+ cursor.next().get("_id").toString());
 				authors.add(b);
 			
 		}

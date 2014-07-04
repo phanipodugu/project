@@ -31,7 +31,7 @@ public class CreateImageCommand {
 	public static void main(String[] args) {
 		CreateImageCommand create = new CreateImageCommand();
 		image im= new image();
-		im.setImagename("java.jpg");
+		im.setImagename("vb.jpg");
 		Object id = create.execute(im);
 		if ( id!=null) {
 			System.out.println("SUCCESS:Image Created:"+id);

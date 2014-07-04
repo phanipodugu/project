@@ -1,0 +1,165 @@
+<html lang="en"><head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>LuckyPants</title>
+
+	<style type="text/css">
+
+	body {
+		background-color:#f3f3f3;
+		line-height:1.3;
+	}
+	#container {
+			/*width:960px;
+						margin:10px auto;*/
+			padding:20px;
+			display:block;
+			background-color:#fff;
+			border:1px solid #ccc;
+	}
+	pre {
+		background-color:#fffdc0;
+		margin:0px 0px 30px;
+		text-align:left;
+	}
+
+	td pre {
+     	background-color:#ffffff;
+	}
+
+	code {
+		background-color:#f2f2f2;
+	}
+	h2 {
+		margin: 30px 0px 0px;
+	}
+	p {
+		margin:3px 0px 16px;
+	}
+	a, a:link {
+		padding-left:3px;
+		padding-right:3px;
+	}
+	a:hover {
+		background-color:#666;
+		color:#fff;
+	}
+	ol ol {
+		list-style:lower-alpha;
+	}
+
+	</style>
+
+</head></head><body>
+
+<div id="container">
+	 <!-- <p style="font-size:10px;text-align:center;color:#990000; font-family:Arial,sans-serif;">CONFIDENTIAL &amp; PROPRIETARY TO CASHSTAR, INC</p> -->
+<h1>LuckyPants Documentation</h1>
+
+<!-- Table of contents -->
+<h2>Contents</h2>
+<ol>
+<li><a href="#overview">Overview</a></li>
+<li>Services
+  <ol>
+    <li><a href="#supportedos">Get List of books</a></li>
+    <li><a href="#imagenames">Get list of imagenames</a></li>
+    <li><a href="#Image">Get Image</a></li>
+    
+
+  </ol>
+</li>
+
+<h2><a name="overview">Overview</a></h2>
+
+<p>LuckyPants is a RESTful web service that allows users to:</p>
+
+
+
+<h2><a name="supportedos">Get List of books(HTTP GET)</a></h2>
+
+<p>A GET method to <code>intense-headland-8238.herokuapp.com/rest/books</code> can be made to return JSON representations of List of books.
+<p>A successful request will result in an HTTP status code of 200 and a JSON Array list of books in the response body.</p>
+
+<p class="code-type">JSON</p>
+
+<pre>[
+    {
+     
+    
+    {"imageid":"advancedjava.jpg",
+    "isbn":"678",
+    "author":
+    {"id":"53920a0fcc04017459f58552",
+    "fname":"Vishnu",
+    "lname":"Priya"},
+    "_author_id":"53920a0fcc04017459f58552",
+    "title":"advancedjava"}
+    
+    {"imageid":"ds.jpg",
+    "isbn":"99999",
+    "author":
+    {"id":"539dfcc9cc044c2164143d85",
+    "fname":"ramu",
+    "lname":"Nur"},
+    "_author_id":"539dfcc9cc044c2164143d85",
+    "title":"DS"}
+    
+    
+    {"imageid":"12345.jpeg",
+    "isbn":"676",
+    "author":
+    {"id":"5391f7aecc044a02928e1a09",
+    "fname":"Vishnu",
+    "lname":"Priya"},
+    "_author_id":"5391f7aecc044a02928e1a09",
+    "title":"os"}
+    
+    
+    {"imageid":"java.jpg",
+    "isbn":"190",
+    "author":
+    {"id":"539208cccc04e47652a07aec",
+    "fname":"Gula",
+    "lname":"Nurmatova"},
+    "_author_id":"539208cccc04e47652a07aec",
+    "title":"java"},
+    
+        }
+]
+</pre>
+
+<h2><a name="imagenames">Get List of Imagenames(HTTP GET)</a></h2>
+<p>To get list of imagenames, request an HTTP GET to this URL 
+	<code>intense-headland-8238.herokuapp.com/rest/books/images</code></p>
+<p>For example, <code>intense-headland-8238.herokuapp.com/rest/books/images</code> will return:</p>
+<p class="code-type">JSON</p>
+<pre>[
+{"imagename":"ds.jpg"},
+{"imagename":"java.jpg"},
+{"imagename":"os.jpg"},
+{"imagename":"cn.jpg"},
+{"imagename":"co.jpg"},
+{"imagename":"dip.jpg"},
+{"imagename":"c#.jpg"},
+{"imagename":"advancedjava.jpg"},
+{"imagename":"nano.jpg"},
+{"imagename":"javabeans.jpg"},
+{"imagename":"vb.jpg"}
+    
+]</pre>
+
+<h2><a name="image">Get Image(HTTP GET)</a></h2>
+<p>To get the image of a book,request an HTTP GET to this URL
+	<code>intense-headland-8238.herokuapp.com/rest/books/files/ds.jpg</code></p>
+<p>A successful request will result in an HTTP status code of 200 and an image of a book in the response body.</p>
+
+<p class="code-type">JSON</p>
+
+<pre>[
+    displays the picture of the book.
+]</pre>
+
+</div><!-- container -->
+
+</body></html>
